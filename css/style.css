@@ -1,0 +1,653 @@
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'),
+         url('../fonts/lato-v16-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'),
+         url('../fonts/lato-v16-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Lato Black'), local('Lato-Black'),
+         url('../fonts/lato-v16-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v16-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /*Стабилизируем размеры блоков*/
+  html{
+      box-sizing: border-box;
+  }
+  *, *::before, ::after{
+      box-sizing: inherit;
+  }
+  /*--------------------------*/
+  body{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #000000;
+  }
+ .wrapper{
+     max-width: 1060px;
+     margin: 0 auto;
+     padding: 0 15px;
+     
+ }
+ .header{
+
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding-bottom: 20px;
+     transition: .5s;
+     z-index: 40;
+ }
+ .header_background{
+    background: rgba(14, 29, 40, 0.541);
+ }
+.header_burger{
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+}
+.burger_line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+}
+.burger_line_first{
+    top: 0;
+}
+.burger_line_second{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.burger_line_third{
+    bottom: 0;
+}
+ .header_wrapper{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: flex-end;
+     justify-content: space-between;
+     padding-top: 56px;
+ }
+ .header_list{
+     display: flex;
+     flex-wrap: wrap;
+
+ }
+ .header_item{
+    margin: 0 82px 0 0;
+ }
+ .header_item:last-child{
+     margin:  0 0 0 0;
+ }
+ .header_link{
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+ }
+ .header_link:hover, .header_link:focus, .header_link:active{
+    opacity: .75;
+ }
+ .intro{
+     min-height: 100vh;
+     background: url('../img/intro.jpg') no-repeat center;
+     background-size: cover;
+     padding: 263px 0 0 0 ;
+ }
+ .intro_title{
+    max-width: 619px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin: 0 0 22px 0;
+ }
+ .intro_subtitle{
+    max-width: 546px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 0 0 59px 0;
+ }
+ .search_form_info{
+     display: flex;
+     flex-wrap: wrap;
+ }
+ .search_form_field{
+    background-color: transparent;
+    background: url('../img/svg/Oval.svg') no-repeat left 8px;
+    background-size: 20px;
+    border: none;
+    border-bottom: 2px solid #BFC0C5;
+    margin: 0 60px 0 0;
+    width: 297px;
+    padding:  0 0 20px 43px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px; 
+    color: #FFFFFF;
+ }
+ .search_form_field::placeholder{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px; 
+    color: #FFFFFF;
+ }
+ .search_form_submit{
+    padding: 15px 39px 15px 39px;
+    text-transform: uppercase;
+    background: #1B7DFF;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    border: none;
+ }
+ .search_form_submit:hover, .header_link:focus, .header_link:active{
+    background: rgb(18, 51, 95);
+ }
+
+
+ .benefits_wrap{
+     max-width: 1262px;
+     background-color: #FFFFFF;
+     margin: 0 auto;
+     box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+     position: relative;
+
+ }  
+ .benefits_title{
+    width: 100%;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+    padding: 93px 100px 88px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: #FFFFFF;
+    
+ }
+ img{
+     max-width: 100%;
+     height: auro;
+ }
+ .benefits_cards{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-column-gap: 55px;
+     padding: 0 100px;
+     padding: 0 100px 112px 100px;
+     margin-bottom: 131px;
+ }
+ .benefits_card{
+    grid-column:  span 1;
+ }
+ .benefits_card_pic{
+     max-width: 67px;
+     margin-bottom: 37px;
+ }
+ .icon_card{
+     display: block;
+ }
+ .benefits_card_title{
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 26px;
+ }
+ .benefits_card_desc{
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 299px;
+    margin-bottom: 39px;
+
+ }
+ .benefits_card_more{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    position: relative;
+ }
+ .benefits_card_more::before{
+     position: absolute;
+     right: -60px;
+     top: -3px;
+     content: url('../img/svg/Shape.svg');
+
+ }
+ .wrapper_full{
+     max-width: 1262px;
+     margin: 0 auto;
+     padding: 0 15px;
+ }
+.places_title{
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+    position: relative;
+}
+.places_title::before{
+    position: absolute;
+    bottom: -9px;
+    content: "";
+    width: 253px;
+    height: 3px;
+    border: 2px solid #006DFE;
+    border-radius: 2px;
+}
+.places_title_margin{
+    margin-bottom: 46px;
+}
+
+.places_caption{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.view_all{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    position: relative;
+    left: -60px;
+    top: 15px;
+ }
+ .view_all::before{
+     position: absolute;
+     right: -60px;
+     top: -3px;
+     content: url('../img/svg/Shape.svg');
+
+ }
+ .places{
+     margin-bottom: 150px;
+ }
+ .places_cards{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+ }
+ .places_card{
+     position: relative;
+     overflow: hidden;
+     box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+ }
+ .places_card:hover .places_card_pic{
+    transform: scale(1.05);
+}
+ .places_card::before{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 24, 36, 0.4); 
+}
+.places_card_title{
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+}
+ .places_card_size_lg{
+     grid-column: span 3;
+ }
+ .places_card_size_pic_lg{
+    height: 354px;
+    object-fit: cover;
+    
+ }
+ .places_card_pic{
+    width: 100%;
+     transition: .15s all;
+ }
+ .places_card_link{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 5;
+ }
+ .places_card_size_small{
+    grid-column: span 2;
+ }
+ .places_card_size_pic_small{
+
+    object-fit: cover;
+    height: 283px;
+ }
+
+
+
+.tours{
+    margin-bottom: 139px;
+}
+.tours_tour{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 108px;
+    align-items: center;
+    margin-bottom: 77px;
+}
+.tour_info{
+    padding:  0 0 0 47px;
+}
+.tour_title{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: #102746;
+    margin-bottom: 85px;
+}
+.tour_desc{
+    font-size: 16px;
+    line-height: 24px;
+    color: #102746;
+    margin-bottom: 58px;
+}
+.tour_more{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    position: relative;
+ }
+ .tour_more::before{
+     position: absolute;
+     right: -60px;
+     top: -3px;
+     content: url('../img/svg/Shape.svg');
+ }
+
+ .top_title{
+     margin-bottom: 64px;
+ }
+ .top{
+     margin-bottom: 86px;
+ }
+ .top_cards{
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     grid-gap: 58px 57px;
+ }
+ .top_card_pic{
+     position: relative;
+     margin-bottom: 45px;
+ }
+ .top_card_title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgb(255, 255, 255);
+ }
+ .top_card{
+     display: flex;
+     flex-direction: column;
+     grid-column: span 2;
+ }
+ .top_card_stats{
+     position: absolute;
+     bottom: 0;
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     padding: 16px 25px;
+     background: rgba(21, 24, 36, 0.6);
+ }
+ .top_card_info{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(255, 255, 255);
+ }
+ .top_card_likes_value{
+    position: relative;
+    padding: 0 30px 0  10px;
+ }
+ .top_card_likes_value::before{
+     position: absolute;
+     right: 9px;
+     top: 0px;
+     content: url('../img/svg/heart.svg');
+ }
+ .top_card_comments_value{
+    position: relative;
+    padding: 0 15px 0 0;
+ }
+ .top_card_comments_value::before{
+    position: absolute;
+    right: -5px;
+    top: 0px;
+    content: url('../img/svg/comment.svg');
+}
+.top_card_desc{
+    margin-bottom: 41px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.top_card_see_more{
+    font-size: 16px;
+    width: 117px;
+    line-height: 19px;
+    color: #FFFFFF; 
+    padding: 12px 19px 12px 19px;
+    background: #006DFE;
+    text-decoration: none;
+}
+.vodeos{
+    width: 100%;
+}
+.videos_wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+.video_item{
+    padding-top: 56.25%;
+}
+.video_element{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.footer{
+    background: #0E1D28;
+    padding: 119px 0;
+}
+.footer_item{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.footer_logo{
+    width: 50%;
+}
+.footer_nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.footer_menu_title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.footer_menu_link{
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+@media screen and (max-width: 960px){
+    .search_form_field{
+        margin-bottom: 25px;
+    }
+    .benefits_cards{
+        margin-bottom: 65px;
+    }
+    .benefits_cards{
+        padding: 0 15px;
+    }    
+    .benefits{
+        margin-bottom: 75px;
+    }
+    .search_form_field{
+        width: 100%;
+        grid-column-gap: 35px;
+    }
+    .benefits_title{
+        padding: 55px 15px;
+    }
+    .benefits_card{
+        padding:  0 0 10px 0;
+    }
+    .benefits_wrap{
+        box-shadow: none;
+    }
+    .places_card_size_lg{
+        grid-column: span 6;
+    }
+    .places_card_size_small{
+        grid-column: span 6;
+    }
+    .places{
+        margin-bottom: 75px;
+    }
+    .tours_tour{
+        grid-column-gap: 35px;
+    }
+    .tour_info{
+        padding-left: 0;
+    }
+    .tour_title{
+        margin-bottom: 35px;
+    }
+    .tour_desc{
+        margin-bottom: 15px;
+    }
+    .top_cards{
+        grid-column-gap: 25px;
+        grid-row-gap: 55px;
+    }
+    .top_card{
+        grid-column: span 3;
+    }
+    .top_card_pic{
+        margin-bottom: 25px;
+    }
+    .footer{
+        padding: 60px 0;
+    }
+}
+@media screen and (max-width: 765px){
+
+}
+@media screen and (max-width: 767px){
+    .header_burger{
+        display: block;
+    }
+    .header_nav{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #000;
+        z-index: 41;
+        padding: 75px;
+        transform: translateX(100%);
+        transition: .2s all linear;
+    }
+    .header_nav_active{
+        transform: translateX(0);
+    }
+    .header_item{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    .header_item:last-child{
+        margin: 0;
+    }
+    .header_link{
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .header_nav_close{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 42;
+    }
+    .header_navclose_line{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 50%;
+    }
+    .header_navclose_line:first-child{
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .header_navclose_line{
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    
+    .search_form_field{
+        margin-right: 0;
+    }
+    .intro{
+        padding: 130px 0 0 0;
+    }
+    .benefits_card{
+        grid-column: span 3;
+    }
+}
